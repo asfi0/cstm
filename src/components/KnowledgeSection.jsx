@@ -8,21 +8,21 @@ const pillars = [
     title: "Academic Excellence",
     description:
       "We are committed to delivering quality education that builds strong academic foundations and encourages critical thinking among young women.",
-    icon: <BookOpen size={36} className="text-primary" />,
+    icon: <BookOpen size={36} />,
   },
   {
     id: "02",
     title: "Empowerment & Growth",
     description:
       "Our institution empowers female students with confidence, skills, and opportunities to grow intellectually, socially, and personally.",
-    icon: <Users size={36} className="text-primary" />,
+    icon: <Users size={36}  />,
   },
   {
     id: "03",
     title: "Leadership & Values",
     description:
       "We nurture future leaders by promoting discipline, ethics, responsibility, and a strong sense of purpose in every student.",
-    icon: <Award size={36} className="text-primary" />,
+    icon: <Award size={36} />,
   },
 ];
 
@@ -74,7 +74,7 @@ export default function KnowledgeSection() {
         {pillars.map((pillar, index) => (
           <motion.div
             key={pillar.id}
-            className="bg-gray-50 w-full max-w-[300px] p-8 rounded-2xl transition hover:shadow-lg"
+            className="group bg-gray-50 w-full max-w-[300px] p-8 rounded-2xl transition hover:bg-primary/80 hover:backdrop-blur-md cursor-pointer"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -82,15 +82,15 @@ export default function KnowledgeSection() {
             variants={boxVariant}
           >
             <div className="flex items-center justify-between">
-              <div className="text-3xl font-bold text-primary">{pillar.id}</div>
-              <div>{pillar.icon}</div>
+              <div className="text-3xl font-bold text-primary group-hover:text-white">{pillar.id}</div>
+              <div className="text-primary group-hover:text-white">{pillar.icon}</div>
             </div>
 
-            <h3 className="mt-6 text-xl font-semibold text-gray-900">
+            <h3 className="mt-6 text-xl font-semibold text-gray-900 group-hover:text-white">
               {pillar.title}
             </h3>
 
-            <p className="mt-3 text-gray-700 text-sm leading-relaxed">
+            <p className="mt-3 text-gray-700 text-sm leading-relaxed group-hover:text-white">
               {pillar.description}
             </p>
           </motion.div>

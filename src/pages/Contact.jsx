@@ -8,7 +8,7 @@ const Contact = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="bg-primary/10 py-20 text-center rounded-4xl"
+        className=" py-20 text-center rounded-4xl max-w-7xl mx-auto"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

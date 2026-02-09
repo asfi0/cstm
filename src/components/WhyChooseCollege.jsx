@@ -94,7 +94,7 @@ export default function WhyChooseCollege() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariant}
-              className="border border-gray-200 p-6 hover:shadow-md transition rounded-xl bg-white"
+              className="border border-primary border-2 p-6 hover:shadow-lg hover:shadow-primary/20 transition rounded-xl bg-white"
             >
               <div className="text-primary mb-3">{item.icon}</div>
               <h3 className="font-semibold text-lg text-gray-800">{item.title}</h3>

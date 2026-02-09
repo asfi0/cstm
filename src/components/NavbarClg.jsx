@@ -9,17 +9,17 @@ export default function Navbar() {
     <header className="w-full bg-background">
 
       {/* TITLE BAR */}
-      <div className="mx-auto max-w-7xl px-6 py-5 text-center">
+      <div className="mx-auto border-none max-w-7xl px-6 py-5 text-center">
         <Link to="/">
           <h1 className="inline-block px-6 py-2 text-3xl font-extrabold text-foreground">
-            Govt College For Girls DaudKhel
+            Govt College For Women DaudKhel
           </h1>
         </Link>
       </div>
 
       {/* NAVBAR */}
-      <div className="mx-auto max-w-7xl px-4">
-        <nav className="flex items-center justify-center gap-6 rounded-3xl border-2 border-primary bg-white px-6 py-3 text-lg font-medium">
+      <div className="mx-auto max-w-7xl px-4 ">
+        <nav className="flex items-center justify-center gap-6 px-6 py-3 text-lg font-medium rounded-3xl border-2 border-primary">
           
           {[
             { to: "/", label: "Home" },

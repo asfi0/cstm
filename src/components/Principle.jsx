@@ -1,82 +1,57 @@
 import React from "react";
-import principalImg from "../assets/teacherimg.webp"; // update if needed
 import { motion } from "framer-motion";
 
 const PrincipleSection = () => {
-  // Variants for animations
   const textVariant = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-  };
-
-  const imagePopVariant = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
-  };
-
-  const boxVariant = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 0.4, x: 0, transition: { duration: 0.8, delay: 0.2 } },
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 },
+    },
   };
 
   return (
-    <section className="max-w-7xl bg-white px-4 py-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section className="max-w-7xl mx-auto bg-white px-4 py-20">
+      <motion.div
+        className="max-w-4xl mx-auto text-left"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={textVariant}
+      >
+        {/* HEADING */}
+        <h2 className="mb-6">
+          <span className="block text-3xl md:text-4xl font-semibold text-gray-700">
+            Message from the Principal
+          </span>
+          <span className="block mt-2 text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary">
+            Mrs. Shaheen Akhtar
+          </span>
+        </h2>
 
-        {/* LEFT: IMAGE WITH OFFSET BOX */}
-        <div className="relative flex justify-end">
-          
-          {/* OFFSET BACKGROUND BOX (RIGHT SIDE) */}
-          <motion.div
-            className="absolute -right-6 top-6 w-[80%] h-[85%] bg-primary rounded-3xl"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={boxVariant}
-          />
+        {/* MESSAGE */}
+        <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
+          <span className="font-semibold">
+            Welcome to our college,
+          </span>
 
-          {/* IMAGE POP-IN */}
-          <motion.img
-            src={principalImg}
-            alt="Principal"
-            className="relative z-10 w-[85%] rounded-3xl object-cover"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={imagePopVariant}
-          />
-        </div>
+          an institution committed to academic excellence, character building, and the holistic development of our students.
 
-        {/* RIGHT: TEXT CONTENT */}
-        <motion.div
-          className="text-left"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={textVariant}
-        >
-          <h2 className="mb-6">
-            <span className="block text-3xl md:text-4xl font-semibold text-gray-700">
-              Principal
-            </span>
-            <span className="block text-5xl md:text-6xl font-extrabold text-primary">
-              Shaheen
-            </span>
-          </h2>
+          Education is not merely the acquisition of knowledge; it is the cultivation of values, critical thinking and responsible citizenship. Our college strives to provide a learning environment that encourages intellectual curiosity, discipline, creativity, and ethical conduct. We aim to equip our students with the skills and confidence required to meet the challenges of a rapidly changing world.
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
-            At <span className="font-semibold">Govt College For Girls DaudKhel</span>,
-            our vision is to nurture confident, educated, and empowered young
-            women who are prepared to contribute meaningfully to society.
-            We are committed to academic excellence, character building, and
-            providing an inclusive environment where students can grow
-            intellectually, socially, and ethically. Our goal is to shape
-            future leaders through quality education, discipline, and values
-            that last a lifetime.
-          </p>
-        </motion.div>
+          Our dedicated faculty members play a vital role in mentoring students and nurturing their potential through innovative teaching methods and a supportive academic atmosphere. Alongside academics, we place great emphasis on co-curricular activities, leadership development, and community engagement to ensure balanced growth.
 
-      </div>
+          We firmly believe that collaboration between students, parents, teachers, and administration is the key to success. Together, we endeavor to uphold high standards of education and to prepare our students to become productive, responsible, and enlightened members of society.
+
+          I invite you to explore our website to learn more about our academic programs, facilities, and achievements. We look forward to your association and support in our mission of educational excellence.
+
+          With best wishes,
+          <span className="block mt-4 font-semibold text-primary">Mrs Shaheen Akhtar</span>
+          <span className="block">Principal</span>
+          Government College for Women, DaudKhel
+        </p>
+      </motion.div>
     </section>
   );
 };

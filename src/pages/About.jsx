@@ -1,135 +1,173 @@
 import React from "react";
 import { motion } from "framer-motion";
-import collegeImg from "../assets/arabicadult.webp"; // update path if needed
+import collegeImg from "../assets/arabicadult.webp";
 
 const AboutPage = () => {
   return (
     <main className="bg-background text-foreground font-sans">
-      
-      {/* Hero Section */}
+
+      {/* HERO */}
       <motion.section
-        className="bg-primary/10 rounded-4xl py-20 text-center"
-        initial={{ opacity: 0, y: -50 }}
+        className="max-w-7xl mx-auto py-20 text-center"
+        initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
-          About Govt College for Girls DaudKhel
+          Government Associate College for Women, Daudkhel
         </h1>
-        <p className="text-gray-700 max-w-2xl mx-auto text-lg">
-          Dedicated to nurturing young women into confident, educated, and empowered citizens, 
-          we provide quality education, modern facilities, and a supportive learning environment.
+        <p className="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
+          A leading public sector institution in District Mianwali, committed to
+          providing quality education at Intermediate and Degree levels and
+          promoting women’s education in underserved regions.
         </p>
       </motion.section>
 
-      {/* College Mission */}
+      {/* INTRO & LOCATION */}
       <motion.section
         className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-2 gap-12 items-center"
-        initial={{ opacity: 0, x: -50 }}
+        initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Our Mission
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+            Introduction & Geographical Location
           </h2>
-          <p className="text-gray-700 leading-relaxed text-lg">
-            Our mission is to empower girls through education, instill strong values, and 
-            provide a safe, inclusive environment where each student can excel academically 
-            and personally. We strive to create leaders of tomorrow who are confident, capable, 
-            and socially responsible.
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Government Associate College for Women, Daudkhel, is the only
+            government college for women serving a vast area of approximately
+            forty square kilometers in District Mianwali. The college plays a
+            vital role in expanding access to higher education for women.
+            <br /><br />
+            Located about 45 kilometers north of Mianwali city, near the historic
+            town of Kalabagh, Daudkhel is a remote and underdeveloped area. The
+            region is known for its patriotic population, many of whom have
+            served with distinction in national institutions, particularly the
+            Pakistan Armed Forces.
           </p>
         </div>
+
         <motion.img
           src={collegeImg}
-          alt="College Building"
+          alt="College Location"
           className="w-full rounded-3xl shadow-lg"
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         />
       </motion.section>
 
-      {/* Our Values */}
+      {/* SOCIAL & EDUCATIONAL BACKGROUND */}
       <motion.section
         className="max-w-7xl mx-auto px-6 md:px-12 py-16"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
-          Our Core Values
-        </h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { title: "Academic Excellence", desc: "Providing high-quality education and guidance." },
-            { title: "Integrity", desc: "Upholding honesty, ethics, and responsibility." },
-            { title: "Empowerment", desc: "Encouraging confidence and leadership in every student." },
-            { title: "Community", desc: "Building a caring and collaborative learning environment." },
-          ].map((value, index) => (
-            <motion.div
-              key={index}
-              className="bg-card p-6 rounded-2xl shadow-md text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <h3 className="text-xl font-semibold text-primary mb-2">{value.title}</h3>
-              <p className="text-gray-700 text-sm">{value.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* History Section */}
-      <motion.section
-        className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-2 gap-12 items-center"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
+          Social & Educational Background
+        </h2>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          The residents of Daudkhel largely follow traditional tribal customs,
+          which historically made educational opportunities for women more
+          challenging. Despite these social constraints, awareness regarding
+          the importance of girls’ education has increased significantly in
+          recent years.
+          <br /><br />
+          Prior to the establishment of this college, there was no government
+          institution for women in the area. Female students were forced to
+          travel long distances to Mianwali city after matriculation, making
+          higher education inaccessible for many due to transportation and
+          financial constraints. As a result, numerous capable students were
+          deprived of continuing their education.
+        </p>
+      </motion.section>
+
+      {/* ESTABLISHMENT & IMPACT */}
+      <motion.section
+        className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-2 gap-12 items-center"
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <motion.img
           src={collegeImg}
-          alt="College Students"
+          alt="College Campus"
           className="w-full rounded-3xl shadow-lg"
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         />
+
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our History</h2>
-          <p className="text-gray-700 leading-relaxed text-lg">
-            Established to provide quality education for girls in DaudKhel, our college has a rich legacy 
-            of academic excellence and community service. Over the years, we have nurtured generations 
-            of young women who have gone on to excel in higher education, careers, and social contributions.
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+            Establishment & Educational Impact
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            In 2012, the Government of Punjab established Government Associate
+            College for Women, Daudkhel, to address the educational needs of girls
+            in this remote region. Since its inception, the college has brought
+            a positive educational transformation and fostered academic
+            awareness throughout the area.
+            <br /><br />
+            Thousands of students have successfully completed their Intermediate
+            and Degree education from this institution. Many alumnae are now
+            serving in public and private sector organizations, contributing
+            meaningfully to national and social development.
           </p>
         </div>
       </motion.section>
 
-      {/* CTA Section */}
+      {/* ACADEMIC ENVIRONMENT */}
       <motion.section
-        className="py-16 text-center"
+        className="max-w-7xl mx-auto px-6 md:px-12 py-16"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
+          Academic Environment & Institutional Services
+        </h2>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          The college provides a disciplined, supportive, and academically
+          enriching environment under effective administrative supervision.
+          Qualified and experienced faculty members work diligently to meet
+          modern educational standards and guide students toward academic
+          excellence.
+          <br /><br />
+          Alongside academics, the institution promotes co-curricular
+          activities, including literary, scientific, cultural, and academic
+          programs. These initiatives help students develop confidence,
+          leadership qualities, and positive thinking.
+        </p>
+      </motion.section>
+
+      {/* CONCLUSION */}
+      <motion.section
+        className="max-w-6xl mx-auto py-16 px-6 text-center bg-primary/10 rounded-3xl"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <p className="text-lg text-gray-700 mb-6">
-          Join us and be part of a nurturing academic environment for girls.
+        <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-4">
+          Our Commitment to the Future
+        </h2>
+        <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto">
+          Government Associate College for Women, Daudkhel, stands as a symbol of
+          progress, empowerment, and educational development. With growing trust
+          from parents and the community, the college remains committed to
+          shaping a progressive, educated, and dignified society for future
+          generations.
         </p>
-        <a
-          href="/admission"
-          className="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-lg hover:bg-accent transition"
-        >
-          How to Apply
-        </a>
       </motion.section>
 
     </main>

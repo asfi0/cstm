@@ -17,7 +17,7 @@ const fadeUp = {
 export default function Admissions() {
   return (
     <main className="max-w-7xl mx-auto py-16 space-y-24">
-      
+
       {/* INTRO */}
       <motion.section
         variants={fadeUp}
@@ -32,8 +32,8 @@ export default function Admissions() {
         </h1>
         <p className="mt-4 text-gray-600 leading-relaxed">
           Government College for Girls, Daudkhel follows a transparent and
-          merit-based physical admission process. This page guides students
-          and parents through every step.
+          merit-based admission process. All online admissions are processed
+          through the official Punjab Higher Education Department portal (OCAS).
         </p>
       </motion.section>
 
@@ -58,7 +58,7 @@ export default function Admissions() {
           ].map((item, i) => (
             <div
               key={i}
-              className="border border-gray-200 p-6 rounded-lg"
+              className="border border-primary border-2 p-6 rounded-lg"
             >
               <CheckCircle className="text-primary mb-3" />
               <p className="text-gray-700 text-sm">{item}</p>
@@ -91,74 +91,73 @@ export default function Admissions() {
 
       {/* ADMISSION STEPS */}
       <motion.section
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  transition={{ duration: 0.6 }}
->
-  <h2 className="text-2xl font-semibold mb-10 flex items-center gap-3">
-    <ClipboardList className="text-[#ac2b49]" />
-    Admission Process
-  </h2>
-
-  <div className="grid md:grid-cols-2 gap-6">
-    {[
-      {
-        step: "01",
-        title: "Visit the College",
-        desc: "Students must visit Government College for Girls, Daudkhel during official admission dates."
-      },
-      {
-        step: "02",
-        title: "Collect Admission Form",
-        desc: "Admission forms are available from the college administration office."
-      },
-      {
-        step: "03",
-        title: "Complete Documentation",
-        desc: "Fill the form carefully and attach all required documents."
-      },
-      {
-        step: "04",
-        title: "Submit for Merit Review",
-        desc: "Forms are reviewed according to merit and government regulations."
-      },
-      {
-        step: "05",
-        title: "Check Merit List",
-        desc: "Selected candidates are announced via notice board."
-      },
-      {
-        step: "06",
-        title: "Fee Submission",
-        desc: "After selection, students complete the admission by submitting fees."
-      }
-    ].map((item, i) => (
-      <motion.div
-        key={i}
         variants={fadeUp}
-        transition={{ delay: i * 0.05 }}
-        className="border border-gray-200 rounded-lg p-6 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
-        <div className="flex items-start gap-4">
-          <div className="text-primary font-bold text-xl">
-            {item.step}
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900">
-              {item.title}
-            </h3>
-            <p className="text-gray-600 text-sm mt-1">
-              {item.desc}
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</motion.section>
+        <h2 className="text-2xl font-semibold mb-10 flex items-center gap-3">
+          <ClipboardList className="text-primary" />
+          Admission Process
+        </h2>
 
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              step: "01",
+              title: "Apply Online via OCAS",
+              desc: "Students must submit their online admission application through the official OCAS portal."
+            },
+            {
+              step: "02",
+              title: "Merit Evaluation",
+              desc: "Applications are reviewed by the authorities according to merit and government policy."
+            },
+            {
+              step: "03",
+              title: "Merit List Announcement",
+              desc: "Selected candidates are notified through the OCAS system and college notice board."
+            },
+            {
+              step: "04",
+              title: "Visit College for Verification",
+              desc: "Shortlisted students must visit the college for document verification."
+            },
+            {
+              step: "05",
+              title: "Fee Submission",
+              desc: "After verification, students complete admission by submitting the prescribed fees."
+            },
+            {
+              step: "06",
+              title: "Enrollment Confirmation",
+              desc: "Admission is confirmed after successful fee submission and record verification."
+            }
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              variants={fadeUp}
+              transition={{ delay: i * 0.05 }}
+              className="border border-primary border-2 rounded-lg p-6 bg-white"
+            >
+              <div className="flex items-start gap-4">
+                <div className="text-primary font-bold text-xl">
+                  {item.step}
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mt-1">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
 
       {/* IMPORTANT NOTES */}
       <motion.section
@@ -167,22 +166,47 @@ export default function Admissions() {
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="bg-gray-50 p-10 rounded-xl"
+        className="bg-primary/10 hover:shadow-lg p-10 rounded-2xl"
       >
         <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <CalendarDays className="text-[#ac2b49]" />
+          <CalendarDays className="text-primary" />
           Important Information
         </h2>
 
         <ul className="space-y-3 text-gray-700">
           <li>• Admissions are strictly based on merit.</li>
-          <li>• No online admission facility is available.</li>
-          <li>• Parents/guardians are encouraged to visit the college.</li>
-          <li>• Incomplete forms will not be accepted.</li>
+          <li>
+            • All online admissions are processed through the official
+            OCAS (Online College Admission System) portal.
+          </li>
+          <li>• Students must visit the college for document verification.</li>
+          <li>• Incomplete or incorrect applications may be rejected.</li>
         </ul>
       </motion.section>
 
-      {/* PHYSICAL VISIT EMPHASIS */}
+      {/* APPLY NOW */}
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center"
+      >
+        <a
+          href="https://ocas.punjab.gov.pk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary/90 transition"
+        >
+          Apply Now via OCAS
+        </a>
+        <p className="text-sm text-gray-600 mt-3">
+          You will be redirected to the official Punjab Government admission portal.
+        </p>
+      </motion.section>
+
+      {/* LOCATION NOTE */}
       <motion.section
         variants={fadeUp}
         initial="hidden"
@@ -193,9 +217,8 @@ export default function Admissions() {
       >
         <MapPin className="mx-auto text-[#ac2b49] mb-4" size={32} />
         <p className="text-gray-700 leading-relaxed">
-          All admissions are processed <strong>physically on campus</strong>.
-          Students and parents must visit Government College for Girls,
-          Daudkhel during official admission hours.
+          Physical presence at the college is required for document verification
+          and final admission confirmation after applying through OCAS.
         </p>
       </motion.section>
 

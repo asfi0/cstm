@@ -1,50 +1,67 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  BookOpen,
-  Rocket,
-  Users,
-  Award,
-  Code,
-  Globe,
+  Stethoscope,
+  Cpu,
+  Calculator,
+  Palette,
+  BookText,
+  Monitor,
+  HeartPulse,
+  HandHelping
 } from "lucide-react";
 
-const programs = [
+
+const interPrograms = [
   {
-    icon: BookOpen,
-    title: "Academic Courses",
+    icon: Stethoscope,
+    title: "FSc Pre Medical",
     description:
       "Structured courses to strengthen academic foundations and exam performance.",
   },
   {
-    icon: Rocket,
-    title: "STEM Programs",
+    icon: Calculator,
+    title: "FSc Pre Engineering",
     description:
       "Hands-on science and technology programs fostering innovation.",
   },
   {
-    icon: Users,
-    title: "Leadership Development",
+    icon: Cpu,
+    title: "ICS",
     description:
       "Programs focused on confidence, communication, and leadership.",
   },
   {
-    icon: Award,
-    title: "Scholarship Tracks",
+    icon: Palette,
+    title: "Arts",
     description:
       "Merit-based programs encouraging academic excellence.",
   },
+];
+const AssDegPrograms = [
   {
-    icon: Code,
-    title: "Computer & IT",
+    icon: BookText,
+    title: "AD English",
     description:
-      "Programming, web development, and digital skills training.",
+      "Structured courses to strengthen academic foundations and exam performance.",
   },
   {
-    icon: Globe,
-    title: "Global Studies",
+    icon: Monitor,
+    title: "AD Information Technology",
     description:
-      "Courses exploring culture, society, and global perspectives.",
+      "Hands-on science and technology programs fostering innovation.",
+  },
+  {
+    icon: HeartPulse,
+    title: "AD Health & Physical Education",
+    description:
+      "Programs focused on confidence, communication, and leadership.",
+  },
+  {
+    icon: HandHelping,
+    title: "AD Social Work",
+    description:
+      "Merit-based programs encouraging academic excellence.",
   },
 ];
 
@@ -85,7 +102,7 @@ export default function ProgramsPage() {
         className="py-20 text-center"
       >
         <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
-          Our Programs
+          Intermediate Level Programs
         </h1>
         <p className="max-w-2xl mx-auto text-gray-600 text-lg">
           A diverse range of programs designed to empower, educate, and inspire.
@@ -100,26 +117,74 @@ export default function ProgramsPage() {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
       >
-        {programs.map((program, index) => {
+        {interPrograms.map((program, index) => {
+          const Icon = program.icon;
+          return (
+           <motion.div
+  key={index}
+  variants={cardVariants}
+  className="bg-primary rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300"
+>
+  <div className="flex justify-center mb-4">
+    <Icon size={34} className="text-white/90" />
+  </div>
+
+  <h3 className="text-lg font-bold text-white mb-2">
+    {program.title}
+  </h3>
+
+  <p className="text-sm text-white/80 leading-relaxed">
+    {program.description}
+  </p>
+</motion.div>
+
+          );
+        })}
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="py-20 text-center"
+      >
+        <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
+          Associate Degree Programs
+        </h1>
+        <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+          A diverse range of programs designed to empower, educate, and inspire.
+        </p>
+      </motion.section>
+
+      {/* PROGRAMS GRID */}
+      <motion.section
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+      >
+        {AssDegPrograms.map((program, index) => {
           const Icon = program.icon;
           return (
             <motion.div
-              key={index}
-              variants={cardVariants}
-              className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex justify-center mb-4">
-                <Icon size={38} className="text-primary" />
-              </div>
+  key={index}
+  variants={cardVariants}
+  className="bg-primary rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300"
+>
+  <div className="flex justify-center mb-4">
+    <Icon size={34} className="text-white/90" />
+  </div>
 
-              <h3 className="text-lg font-bold mb-2">
-                {program.title}
-              </h3>
+  <h3 className="text-lg font-bold text-white mb-2">
+    {program.title}
+  </h3>
 
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {program.description}
-              </p>
-            </motion.div>
+  <p className="text-sm text-white/80 leading-relaxed">
+    {program.description}
+  </p>
+</motion.div>
+
           );
         })}
       </motion.section>
@@ -141,7 +206,7 @@ export default function ProgramsPage() {
 
         <a
           href="/apply"
-          className="inline-block bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition"
+          className="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-lg border-2 border-white hover:bg-white  hover:text-primary transition"
         >
           How to Apply
         </a>

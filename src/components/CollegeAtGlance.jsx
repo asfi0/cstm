@@ -61,7 +61,7 @@ export default function CollegeAtAGlance() {
           {stats.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white p-6 rounded-xl border"
+              className="bg-white p-6 rounded-xl border-primary border-2 flex flex-col items-start hover:shadow-lg hover:shadow-primary/20"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
