@@ -30,9 +30,9 @@ const Contact = () => {
         viewport={{ once: true }}
       >
         {[
-          { icon: <MapPin size={28} className="text-primary" />, title: "Address", desc: "Govt College for Girls DaudKhel, Punjab, Pakistan" },
-          { icon: <Mail size={28} className="text-primary" />, title: "Email", desc: "info@gcgdaudkhel.edu.pk" },
-          { icon: <Phone size={28} className="text-primary" />, title: "Phone", desc: "+92 300 1234567" },
+          { icon: <MapPin size={28} className="text-primary" />, title: "Address", desc: "Govt. Associate College (W) Daudkhel (Mianwali) Post Office Daudkhel Tesil & District Mianwali" },
+          { icon: <Mail size={28} className="text-primary" />, title: "Email", desc: "Gc.women.daudkhel.hed@gmail.com" },
+          { icon: <Phone size={28} className="text-primary" />, title: "Phone", desc: "0459-332118" },
         ].map((info, index) => (
           <motion.div
             key={index}

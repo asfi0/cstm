@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const newsData = [
   {
     id: 1,
-    title: "Admissions Open for Fall 2025",
-    date: "15 Aug 2025",
+    title: "Gollege Beutification",
+    date: "",
     description:
-      "University admissions are now open for undergraduate and postgraduate programs.",
-    image: "../../assets/student.jpg",
+      "Our college has undergone a stunning transformation with new landscaping, vibrant murals, and modern facilities, creating an inspiring environment for students and staff alike.",
+    image: "../assets/clg-beuty.png",
     link: "/news/admissions-2025",
   },
   {
@@ -49,11 +49,11 @@ const NewsEventsCarousel = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="mb-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            News & Events
+          <h2 className="text-3xl md:text-4xl font-bold text-primary">
+            College Gallery
           </h2>
           <p className="text-muted-foreground mt-2">
-            Latest updates, announcements, and upcoming events
+            A glimpse into our vibrant campus life and recent events.
           </p>
         </div>
 

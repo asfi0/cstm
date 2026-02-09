@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import collegeImg from "../assets/arabicadult.webp";
+import collegimg from "../assets/clg-1.jpeg";
+import eduimage from "../assets/stnd.png";
 
 const AboutPage = () => {
   return (
@@ -51,7 +52,7 @@ const AboutPage = () => {
         </div>
 
         <motion.img
-          src={collegeImg}
+          src={collegimg}
           alt="College Location"
           className="w-full rounded-3xl shadow-lg"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -97,7 +98,7 @@ const AboutPage = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.img
-          src={collegeImg}
+          src={eduimage}
           alt="College Campus"
           className="w-full rounded-3xl shadow-lg"
           initial={{ opacity: 0, scale: 0.9 }}
