@@ -82,8 +82,8 @@ export default function KnowledgeSection() {
             variants={boxVariant}
           >
             <div className="flex items-center justify-between">
-              <div className="text-3xl font-bold text-primary group-hover:text-white">{pillar.id}</div>
-              <div className="text-primary group-hover:text-white">{pillar.icon}</div>
+              <div className="text-3xl font-bold text-secondary group-hover:text-white">{pillar.id}</div>
+              <div className="text-secondary group-hover:text-white">{pillar.icon}</div>
             </div>
 
             <h3 className="mt-6 text-xl font-semibold text-gray-900 group-hover:text-white">

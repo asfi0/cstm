@@ -121,7 +121,7 @@ const NoticesAdvertisements = () => {
               />
 
               {/* GLASS OVERLAY */}
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+              <div className="absolute inset-0 bg-primary/40 backdrop-blur-sm" />
 
               {/* TEXT CONTENT */}
               <div className="absolute inset-0 flex flex-col justify-end p-6">

@@ -215,7 +215,7 @@ export default function Admissions() {
         transition={{ duration: 0.6 }}
         className="text-center max-w-3xl mx-auto"
       >
-        <MapPin className="mx-auto text-[#ac2b49] mb-4" size={32} />
+        <MapPin className="mx-auto text-primary mb-4" size={32} />
         <p className="text-gray-700 leading-relaxed">
           Physical presence at the college is required for document verification
           and final admission confirmation after applying through OCAS.

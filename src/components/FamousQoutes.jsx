@@ -28,7 +28,7 @@ const FamousQuotes = () => {
           
           {/* OFFSET BACKGROUND BOX (RIGHT SIDE) */}
           <motion.div
-            className="absolute -right-6 top-6 w-[80%] h-[85%] bg-gray-700 rounded-3xl"
+            className="absolute -right-6 top-6 w-[80%] h-[85%] bg-primary rounded-3xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

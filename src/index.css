@@ -13,13 +13,13 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 260);
 
-  --primary: #ac2b49;
+  --primary: #0B3D2E;
   --primary-foreground: #ffffff;
 
-  --secondary: oklch(0.96 0.01 260);
+  --secondary: #0D2B45;
   --secondary-foreground: oklch(0.18 0.02 260);
 
-  --accent: oklch(0.96 0.01 260);
+  --accent: #F2C300;
   --accent-foreground: oklch(0.18 0.02 260);
 
   --muted: oklch(0.96 0.01 260);

@@ -7,7 +7,7 @@ const Footer = () => {
         
         {/* College Info */}
         <div>
-          <h3 className="text-lg font-semibold text-[#ac2b49]">
+          <h3 className="text-lg font-semibold text-primary">
             Government College for Women
           </h3>
           <p className="mt-2">

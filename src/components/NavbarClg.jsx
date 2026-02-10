@@ -14,10 +14,10 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-4">
           <img
             src={clgLogo}
-            alt="Government College for Women DaudKhel Logo"
+            alt="LOGO"
             className="h-20 w-20 object-contain"
           />
-          <h1 className="inline-block px-2 py-2 text-3xl font-extrabold text-foreground">
+          <h1 className="inline-block px-2 py-2 text-3xl font-extrabold text-primary">
             Govt College For Women DaudKhel
           </h1>
         </Link>
